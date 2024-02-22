@@ -6,44 +6,23 @@
 в. Если число делится и на 3, и на 5 - FizzBuzz
 г. Иначе, просто выводит число */
 
-import java.util.Arrays;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Random rand = new Random();
-        int[] array = new int[100];
-        for(int i = 0; i < 100; i++){
-            array[i] = rand.nextInt(100);}
-            System.out.println(Arrays.toString(array));
-        for (int i = 0; i < array.length; i++) {
-            if (i % 3 == 0) {
-                System.out.print( " Fizz");
-            }
-            if (i % 5 == 0) {
-                System.out.print(" Buzz");
-            }
+            // Вариант 1
+        int N = 100;
+        for (int i = 1; i <= N; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
-                System.out.print(" FizzBuzz ");
-            } else
-                System.out.print(" "+ array[i]);
-  /*  int[] array = new int[100];
-    for (int i = 0; i < array.length; i++) {
-        array[i] = (int)(Math.random() * 100);
-    }
-      System.out.println(Arrays.toString(array));
-
-        for (int i = 0; i < array.length; i++) {
-            if (i % 3 == 0) {
-                System.out.print( " Fizz");
+                System.out.print("FizzBuzz" + " ");
             }
-            if (i % 5 == 0) {
-                System.out.print(" Buzz");
+            else if (i % 3 == 0) {
+                System.out.print("Fizz"  + " ");
             }
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.print(" FizzBuzz ");
-            } else
-                System.out.print(" "+ array[i]); */
+            else if (i % 5 == 0) {
+                System.out.print("Buzz"  + " ");
+            }
+            else { System.out.print(i + " ");
+            }
         }
     }
 }
